@@ -1,0 +1,299 @@
+[33mcommit 0c35e4573942eecbf0caf93d5e4e5c83a9a9a3ed[m[33m ([m[1;36mHEAD -> [m[1;32mjobifyCloned[m[33m)[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 9 08:40:51 2021 -0800
+
+    add job complete
+
+[33mcommit e499cd422f79f8af6317ed1571e611c8028229a1[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Wed Dec 8 14:09:32 2021 -0800
+
+    setup job
+
+[33mcommit 779ea9c6c843ed41f30d39e6f63933d048bba0ff[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sun Dec 5 09:39:48 2021 -0800
+
+    updated readme
+
+[33mcommit 72fe768b164f800f5283668be2faf983852e81fd[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Dec 4 12:52:19 2021 -0800
+
+    update readme
+
+[33mcommit 68da9d154f57881b7a63b3a0b86d2f8ef1ac128b[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Dec 4 12:47:25 2021 -0800
+
+    updated readme
+
+[33mcommit 3d3fb5dcf3d6ba539537e4715a348e87ccb061b1[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Dec 4 09:53:31 2021 -0800
+
+    updated readme
+
+[33mcommit a5cd82b06fc8b03ba8703bd0fa5dfc72aa41e615[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 2 14:55:32 2021 -0800
+
+    updated readme
+
+[33mcommit 6db29bbf6cdff0f378204a18c2c549bdf64001a7[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 2 12:17:55 2021 -0800
+
+    Unauthenticated Error
+
+[33mcommit adbe953320c6ec934eea10687e0a91b180677824[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 2 11:37:54 2021 -0800
+
+    Bearer Schema
+
+[33mcommit 6bfffc8b479612456385995852a8f0d1f24aa154[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 2 10:50:11 2021 -0800
+
+    authenticate user setup
+
+[33mcommit 952d94271e18e69b374a32f9cc2a17b43fce7e9a[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 2 10:23:33 2021 -0800
+
+    Big Sidebar
+
+[33mcommit 9ff25ea4ff56b2bf020bfd6c75b43e773de86479[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Dec 2 08:44:18 2021 -0800
+
+    NavLinks in Readme
+
+[33mcommit d121f2b9fd5e52ee0b7d21ae3b1778d7fe46f5d4[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Wed Dec 1 13:47:55 2021 -0800
+
+    continue recording
+
+[33mcommit 6f9fc0cd628c642e50147d3773cebc35726272db[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Tue Nov 30 11:05:43 2021 -0800
+
+    logout user
+
+[33mcommit ef75dc8978887f0e9dde612813aab313705bd31f[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Tue Nov 30 10:44:35 2021 -0800
+
+    toggle dropdown
+
+[33mcommit 44fd3da7c612b5e51da9348ed8dae80047e0dd40[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Tue Nov 30 10:28:56 2021 -0800
+
+    toggle sidebar functionality
+
+[33mcommit 8de0c6f746f974d5189ba0f90f692244fc0369ed[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Tue Nov 30 10:05:29 2021 -0800
+
+    navbar setup
+
+[33mcommit 4f88dc86ca319f0eac343cdef6fb026e84b47a0c[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 26 14:33:06 2021 -0800
+
+    updated readme
+
+[33mcommit d8b9e58909c414f0a2e63a8d23bdc10a97aaada9[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 26 11:47:46 2021 -0800
+
+    register user setup
+
+[33mcommit 001f109dcb267f20eca9a8aeed4a2c022ef11834[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Nov 20 12:47:17 2021 -0800
+
+    postman setup in readme
+
+[33mcommit 40675301dfdeb1a912e3a837fe5e9b051ab43f5a[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 19 13:33:04 2021 -0800
+
+    switched to es6 modules on the server
+
+[33mcommit d6b7b3c66820aed62bc588aac9abd1153645d57a[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 19 12:01:12 2021 -0800
+
+    not found and error middleware
+
+[33mcommit 20d98bb9819504afaaea30ca72f5811cb1feb7f2[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 19 11:40:26 2021 -0800
+
+    Nodemon and Express Server
+
+[33mcommit c0be59bc6a8bc5164c0dad4a998d4a96e3d117d3[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 19 11:28:34 2021 -0800
+
+    ES6 Modules
+
+[33mcommit cc6074f8d2f9420e96ab82fdc125bf335910643f[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 19 11:16:55 2021 -0800
+
+    setup server
+
+[33mcommit 56568b5d89a4233a81ce01be28f3057a90c758ba[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 19 10:13:31 2021 -0800
+
+    clear alert
+
+[33mcommit 55f8fd69187ab3f1497cee37ab92e970724f2294[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 15:55:11 2021 -0800
+
+    readme
+
+[33mcommit f2fe9e6ef1cb145ac71463a854a62c0d50a2b9e8[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 15:26:34 2021 -0800
+
+    readme
+
+[33mcommit f85726816fca559db6385a1eb212c896926c877f[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 15:13:37 2021 -0800
+
+    wire up reducer and display alert
+
+[33mcommit e86a2bfc4f8a101c9b958153501d5ba93237ad77[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 12:30:16 2021 -0800
+
+    global context
+
+[33mcommit 4d04dd8888df965b1b8f1222694bac7385d49719[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 12:20:29 2021 -0800
+
+    global context
+
+[33mcommit 97760e36323f021d332be1f84a7959532ac1e364[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 11:53:18 2021 -0800
+
+    toggle member
+
+[33mcommit 101189300c5fe85ea670760aa10c8d8d4f7b399d[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 11:37:03 2021 -0800
+
+    alert component
+
+[33mcommit 4a915f00ca7bd595472397575150a5ea3f1d4593[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 11:01:06 2021 -0800
+
+    updated readme
+
+[33mcommit 7fbc254fddabb0c0d4772e46fd7eaec2b2167962[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 09:21:24 2021 -0800
+
+    updated readme
+
+[33mcommit 50b51da3f6ae412068e59ca4ffcb35f3432dba72[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 09:16:31 2021 -0800
+
+    don't log error in middleware
+
+[33mcommit 257fabeae42ee21324202ec06f7db87a62973619[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Thu Nov 18 09:15:54 2021 -0800
+
+    removed removed and switched to assets
+
+[33mcommit 60a8515bff4841e3854ff28a0eb613014f71ff63[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Wed Nov 17 12:55:02 2021 -0800
+
+    testing path
+
+[33mcommit ea82d795cd4b0235097a9a175d60883ed71c89aa[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Wed Nov 17 12:51:49 2021 -0800
+
+    testing register without container
+
+[33mcommit 19d89e3fae542f54ce7546d40fa1bc45749b64b7[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Tue Nov 16 10:57:56 2021 -0800
+
+    fixed small typo
+
+[33mcommit f2c5f44770425cdb1b09be7c2c863656b571e316[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Mon Nov 15 13:32:37 2021 -0800
+
+    updated readme
+
+[33mcommit 8d64860a32abaed22c15ab8e2ce1a2cb4b208372[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sun Nov 14 20:37:04 2021 -0800
+
+    fixed small bug
+
+[33mcommit 9a0784838cef5074e6c3a6666c128e30bf6de461[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sun Nov 14 20:33:37 2021 -0800
+
+    updated readme
+
+[33mcommit 3dd7c35a8d5d5fb1fcb149a56170aaec7d66dc92[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sun Nov 14 15:19:45 2021 -0800
+
+    more readme stuff
+
+[33mcommit f3f55f9927f414937126745ae434c23b89d36c16[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sun Nov 14 10:27:36 2021 -0800
+
+    updated readme
+
+[33mcommit 9ee9c8d579ff07b6334318be230cea9bd87de5b4[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Nov 13 12:41:50 2021 -0800
+
+    fixed readme text
+
+[33mcommit 084b7a1752959cc9ef86422ac8705055c2b8a8f3[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Nov 13 12:35:57 2021 -0800
+
+    fixed text
+
+[33mcommit 1f30596da416c3079f9e797f6663205faba7974f[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Nov 13 11:46:34 2021 -0800
+
+    changed some css
+
+[33mcommit 44b0d3d6980ede22aaa9e0dc932264e34f0ea463[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Sat Nov 13 11:18:44 2021 -0800
+
+    ready to record
+
+[33mcommit b92df2d776946f0df7fffa5868a84b7056565614[m
+Author: john smilga <johnsmilga@gmail.com>
+Date:   Fri Nov 12 20:20:37 2021 -0800
+
+    first commit
