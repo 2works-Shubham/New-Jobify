@@ -75,7 +75,7 @@ const deleteJob = async (req, res) => {
 
   job.remove();
 
-  res.status(StatusCodes.OK).json({ msg:"Success!..Job removed.." });
+  res.status(StatusCodes.OK).json({ msg: "Success!..Job removed.." });
 };
 
 //*************************************** DELETE-JOB-END ****************************************************
@@ -83,7 +83,25 @@ const deleteJob = async (req, res) => {
 //*************************************** SHOW-STATS-START **************************************************
 
 const showStats = async (req, res) => {
-  console.log("Show stats");
+  let stats = await Job.aggregate([
+    { $match: { createdBy: mongoose.Types.ObjectId(req.user.userId) } },
+    { $group: { _id: "$status", count: { $sum: 1 } } },
+  ]);
+
+  stats = stats.reduce((acc, curr) => {
+    const { _id: title, count } = curr;
+    acc[title] = count;
+    return acc;
+  }, {});
+
+  const defaultStats = {
+    pending: stats.pending || 0,
+    interview: stats.interview || 0,
+    decliend: stats.decliend || 0,
+  };
+
+  let monthlyApplications = []; 
+  res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications });
 };
 
 //*************************************** SHOW-STATS-END **************************************************
