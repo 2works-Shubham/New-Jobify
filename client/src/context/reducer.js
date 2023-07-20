@@ -24,8 +24,8 @@ import {
   EDIT_JOB_BEGIN,
   EDIT_JOB_SUCCESS,
   EDIT_JOB_ERROR,
-  // SHOW_STATS_BEGIN,
-  // SHOW_STATS_SUCCESS,
+  SHOW_STATS_BEGIN,
+  SHOW_STATS_SUCCESS,
   // CHANGE_PAGE,
   // CLEAR_FILTERS,
 } from "./actions";
@@ -250,6 +250,24 @@ if (action.type === EDIT_JOB_ERROR) {
   };
 }
 
+
+if (action.type === SHOW_STATS_BEGIN) {
+  return {
+    ...state,
+    isLoading: true,
+    showAlert: false,
+  };
+}
+
+
+if (action.type === SHOW_STATS_SUCCESS) {
+  return {
+    ...state,
+    isLoading: false,
+    stats: action.payload.stats,
+    monthlyApplications: action.payload.monthlyApplications,
+  };
+}
 
   // if (action.type === SET_EDIT_JOB) {
   //   const job = state.jobs.find((job) => job._id === action.payload.id)

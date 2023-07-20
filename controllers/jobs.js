@@ -97,7 +97,7 @@ const showStats = async (req, res) => {
   const defaultStats = {
     pending: stats.pending || 0,
     interview: stats.interview || 0,
-    decliend: stats.decliend || 0,
+    declined: stats.declined || 0,
   };
 
   let monthlyApplications = []; 
