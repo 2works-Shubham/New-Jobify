@@ -22,6 +22,7 @@ const createJob = async (req, res) => {
 //***************************************** GET-ALL-JOBS-START ****************************************************
 
 const getAllJobs = async (req, res) => {
+  // const { status } = req.query;
   const jobs = await Job.find({ createdBy: req.user.userId });
 
   res
