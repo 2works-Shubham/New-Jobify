@@ -26,8 +26,8 @@ import {
   EDIT_JOB_ERROR,
   SHOW_STATS_BEGIN,
   SHOW_STATS_SUCCESS,
+  CLEAR_FILTERS,
   // CHANGE_PAGE,
-  // CLEAR_FILTERS,
 } from "./actions";
 import { initialState } from "./appContext";
 const reducer = (state, action) => {
@@ -219,55 +219,62 @@ const reducer = (state, action) => {
   }
 
   if (action.type === DELETE_JOB_BEGIN) {
-    return{
+    return {
       ...state,
-      isLoading:true,
-    }
+      isLoading: true,
+    };
   }
 
+  //---------
+  if (action.type === EDIT_JOB_BEGIN) {
+    return { ...state, isLoading: true };
+  }
 
-//---------
-if (action.type === EDIT_JOB_BEGIN) {
-  return { ...state, isLoading: true };
-}
+  if (action.type === EDIT_JOB_SUCCESS) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "success",
+      alertText: "Job Updated!",
+    };
+  }
+  if (action.type === EDIT_JOB_ERROR) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "danger",
+      alertText: action.payload.msg,
+    };
+  }
 
-if (action.type === EDIT_JOB_SUCCESS) {
-  return {
-    ...state,
-    isLoading: false,
-    showAlert: true,
-    alertType: "success",
-    alertText: "Job Updated!",
-  };
-}
-if (action.type === EDIT_JOB_ERROR) {
-  return {
-    ...state,
-    isLoading: false,
-    showAlert: true,
-    alertType: "danger",
-    alertText: action.payload.msg,
-  };
-}
+  if (action.type === SHOW_STATS_BEGIN) {
+    return {
+      ...state,
+      isLoading: true,
+      showAlert: false,
+    };
+  }
 
+  if (action.type === SHOW_STATS_SUCCESS) {
+    return {
+      ...state,
+      isLoading: false,
+      stats: action.payload.stats,
+      monthlyApplications: action.payload.monthlyApplications,
+    };
+  }
 
-if (action.type === SHOW_STATS_BEGIN) {
-  return {
-    ...state,
-    isLoading: true,
-    showAlert: false,
-  };
-}
-
-
-if (action.type === SHOW_STATS_SUCCESS) {
-  return {
-    ...state,
-    isLoading: false,
-    stats: action.payload.stats,
-    monthlyApplications: action.payload.monthlyApplications,
-  };
-}
+  if (action.type === CLEAR_FILTERS) {
+    return {
+      ...state,
+      search: "",
+      searchStatus: "all",
+      searchType: "all",
+      sort: "latest",
+    };
+  }
 
   // if (action.type === SET_EDIT_JOB) {
   //   const job = state.jobs.find((job) => job._id === action.payload.id)

@@ -27,10 +27,10 @@ import {
   EDIT_JOB_ERROR,
   SHOW_STATS_BEGIN,
   SHOW_STATS_SUCCESS,
+  CLEAR_FILTERS,
   // SET_EDIT_JOB,
   // DELETE_JOB_BEGIN,
   // CHANGE_PAGE,
-  // CLEAR_FILTERS,
 } from "./actions";
 import reducer from "./reducer";
 
@@ -64,11 +64,11 @@ export const initialState = {
   numOfPages: 1,
   stats: {},
   monthlyApplications: [],
-  // search: '',
-  // searchStatus: 'all',
-  // searchType: 'all',
-  // sort: 'latest',
-  // sortOptions: ['latest', 'oldest', 'a-z', 'z-a'],
+  search: "",
+  searchStatus: "all",
+  searchType: "all",
+  sort: "latest",
+  sortOptions: ["latest", "oldest", "a-z", "z-a"],
 };
 
 const AppContext = React.createContext();
@@ -272,7 +272,11 @@ const AppProvider = ({ children }) => {
   //************************************ GET-JOBS-START ***********************************
 
   const getJobs = async () => {
-    const url = "/jobs";
+    const { page, search, searchStatus, searchType, sort } = state;
+    let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`;
+    if (search) {
+      url = url + `&search=${search}`;
+    }
 
     dispatch({ type: GET_JOBS_BEGIN });
 
@@ -329,7 +333,7 @@ const AppProvider = ({ children }) => {
         },
       });
     }
-    clearAlert()
+    clearAlert();
   };
 
   //************************************ SET-EDIT-JOB-END *********************************
@@ -349,38 +353,35 @@ const AppProvider = ({ children }) => {
   };
   //************************************ DELETE-JOB-END ***********************************
 
-
   //************************************ SHOW-STATS-START *********************************
-  
+
   const showStats = async () => {
-    
-    dispatch({type:SHOW_STATS_BEGIN})
+    dispatch({ type: SHOW_STATS_BEGIN });
 
     try {
-      
-      const {data} = await authFetch.get('/jobs/stats')
+      const { data } = await authFetch.get("/jobs/stats");
       dispatch({
-        type:SHOW_STATS_SUCCESS,
-        payload:{
-          stats:data.defaultStats,
+        type: SHOW_STATS_SUCCESS,
+        payload: {
+          stats: data.defaultStats,
           monthlyApplications: data.monthlyApplications,
         },
-      })
-
+      });
     } catch (error) {
       console.log(error.response);
       // logoutUser()
     }
 
-    clearAlert()
+    clearAlert();
+  };
+  //************************************ SHOW-STATS-END **************************************
 
-  }
-  
-  
-  //************************************ SHOW-STATS-END ***********************************
+  //************************************ CLEAR-FILTERS-START *********************************
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS });
+  };
+  //************************************ CLEAR-FILTERS-END ***********************************
 
-  
-  
   // const getJobs = async () => {
   //   const { page, search, searchStatus, searchType, sort } = state
   //   let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`
@@ -487,11 +488,11 @@ const AppProvider = ({ children }) => {
         deleteJob,
         editJob,
         showStats,
+        clearFilters,
         // setEditJob,
         // editJob,
         // deleteJob,
         // changePage,
-        // clearFilters,
       }}
     >
       {children}

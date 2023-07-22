@@ -5,15 +5,24 @@ import Job from "./Job";
 import Wrapper from "../assets/wrappers/JobsContainer";
 
 const JobsContainer = () => {
+  const {
+    jobs,
+    totalJobs,
+    page,
+    isLoading,
+    getJobs,
+    search,
+    searchStatus,
+    searchType,
+    sort,
+  } = useAppContext();
 
-  const { jobs, totalJobs, page, isLoading, getJobs } = useAppContext();
-  
   useEffect(() => {
     getJobs();
-  }, []);
+  }, [search, searchStatus, searchType, sort]);
 
   if (isLoading) {
-    return <Loading center />
+    return <Loading center />;
   }
 
   if (jobs.length === 0) {
@@ -35,7 +44,6 @@ const JobsContainer = () => {
           return <Job key={job._id} {...job} />;
         })}
       </div>
-    
     </Wrapper>
   );
 };
