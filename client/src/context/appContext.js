@@ -28,9 +28,9 @@ import {
   SHOW_STATS_BEGIN,
   SHOW_STATS_SUCCESS,
   CLEAR_FILTERS,
+  CHANGE_PAGE,
   // SET_EDIT_JOB,
   // DELETE_JOB_BEGIN,
-  // CHANGE_PAGE,
 } from "./actions";
 import reducer from "./reducer";
 
@@ -382,6 +382,13 @@ const AppProvider = ({ children }) => {
   };
   //************************************ CLEAR-FILTERS-END ***********************************
 
+
+  //************************************ CHANGE-PAGE-START ***********************************
+  const changePage = (page) => {
+    dispatch({ type: CHANGE_PAGE, payload: { page } })
+  }
+  //************************************ CHANGE-PAGE-END *************************************
+
   // const getJobs = async () => {
   //   const { page, search, searchStatus, searchType, sort } = state
   //   let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`
@@ -462,9 +469,6 @@ const AppProvider = ({ children }) => {
   //   }
   // }
 
-  // const changePage = (page) => {
-  //   dispatch({ type: CHANGE_PAGE, payload: { page } })
-  // }
   // const clearFilters = () => {
   //   dispatch({ type: CLEAR_FILTERS })
   // }
@@ -489,10 +493,10 @@ const AppProvider = ({ children }) => {
         editJob,
         showStats,
         clearFilters,
+        changePage,
         // setEditJob,
         // editJob,
         // deleteJob,
-        // changePage,
       }}
     >
       {children}
