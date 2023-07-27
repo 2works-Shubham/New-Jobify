@@ -295,8 +295,7 @@ const AppProvider = ({ children }) => {
         },
       });
     } catch (error) {
-      console.log(error.response);
-      // logoutUser()
+      logoutUser()
     }
     clearAlert();
   };
@@ -347,8 +346,7 @@ const AppProvider = ({ children }) => {
 
       console.log(`Job deleted : ${jobId}`);
     } catch (error) {
-      console.log(error.response);
-      // logoutUser()
+      logoutUser()
     }
   };
   //************************************ DELETE-JOB-END ***********************************
@@ -368,8 +366,7 @@ const AppProvider = ({ children }) => {
         },
       });
     } catch (error) {
-      console.log(error.response);
-      // logoutUser()
+      logoutUser()
     }
 
     clearAlert();

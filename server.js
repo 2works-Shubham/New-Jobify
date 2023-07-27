@@ -2,7 +2,10 @@ import dotenv from 'dotenv'
 dotenv.config()
 import('express-async-errors')
 
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
 import path from 'path'
+
 import express from 'express'
 const app = express()
 
@@ -22,24 +25,26 @@ import jobsRouter from './routes/jobs.js'
 import notFoundMiddleware from './middleware/not-found.js'
 import errorHandlerMiddleware from './middleware/error-handler.js'
 
+const __dirname = dirname(fileURLToPath(import.meta.url))
+// only when ready to deploy
+app.use(express.static(path.resolve(__dirname, './client/build')))
+
 app.use(express.json())
+
 app.use(helmet())
 // not needed if client and back-end on the same server (heroku)
 app.use(cors())
 app.use(xss())
 app.use(mongoSanitize())
 
-// only when ready to deploy
-// app.use(express.static(path.resolve(__dirname, './client/build')))
-
 // routes
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/jobs', authenticateUser, jobsRouter)
 
 // only when ready to deploy
-// app.get('*', function (request, response) {
-//   response.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
-// })
+app.get('*', function (request, response) {
+  response.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+})
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
