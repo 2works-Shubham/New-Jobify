@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "express-mongo-sanitize": "^2.1.0",
-    "express-rate-limit": "^5.3.0",
+    "express-rate-limit": "^5.5.1",
     "helmet": "^4.6.0",
     "http-status-codes": "^2.1.4",
     "joi": "^17.4.0",
@@ -30,6 +30,7 @@
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
+    "@types/express-rate-limit": "^6.0.0",
     "concurrently": "^6.4.0",
     "nodemon": "^2.0.9"
   },
